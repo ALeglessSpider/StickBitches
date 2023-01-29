@@ -3,8 +3,8 @@
 
 let checkout = document.getElementById("checkout");
 let checkdiv = document.getElementById("check-div");
-let flag3 = false;
-const checkoutHandler = () => {
+
+const checkoutHandler = (flag3) => {
     if (!flag3) {
         checkout.classList.add("translate-x-full");
         checkout.classList.remove("translate-x-0");
