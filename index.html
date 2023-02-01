@@ -35,7 +35,9 @@
             <a class="home text-sm cursor-pointer text-black hover:text-lg transition delay-400 hidden md:inline" href="index.html">HOME</a>
             <a class="Store text-sm cursor-pointer text-black hover:text-lg transition delay-400 hidden md:inline" href="store.html">STORE</a>
         </div>
-        <div class="col-span-4 flex flex-row justify-center lg:text-4xl md:text-2xl text-lg">Stick Bitches</div>
+        <div class="col-span-4 flex flex-row justify-center">
+            <a class="lg:text-4xl md:text-2xl text-lg cursor-pointer" href="index.html">Stick Bitches</a>
+        </div>
         <div class="flex flex-row justify-end items-center gap-x-4">
             <i class="text-sm cursor-pointer text-black not-italic hover:text-lg transition delay-400 hidden md:inline">PROFILE</i>
             <button onclick="checkoutHandler(true)" class="text-sm cursor-pointer text-black not-italic hover:text-lg transition delay-400">CART</button>
@@ -45,35 +47,48 @@
 
 <!--Hero-->
 
-<div class="daBig grid grid-col-1 px-4">
+<!-- The outer container with a grid layout -->
+<div class="container py-3 mx-auto px-4">
+    <!-- The main content container with a flex row layout -->
     <div class="punchLine flex flex-row items-center gap-16">
+        <!-- The left-side column container with a flex layout -->
         <div class="flex-col">
+            <!-- The container for punch line -->
             <div class="punch">
-                <p class="text-[90px] font-bold leading-none">BITCHES</p>
-                <p class="text-[90px] font-bold leading-none">ON</p>
-                <p class="text-[90px] font-bold leading-none">DEMAND!</p>
+                <!-- The text elements with a font size of 90px and bold font weight -->
+                <p class="text-5xl font-bold leading-none">BITCHES</p>
+                <p class="text-5xl font-bold leading-none">ON</p>
+                <p class="text-5xl font-bold leading-none">DEMAND!</p>
             </div>
+            <!-- The description container with padding on the top -->
             <div class="desc pt-4">
-                <p class="text-[20px] leading-none">The Easiest Way to Fulfill Your Fantasies. Get the perfect bitch for</p>
-                <p class="text-[20px] leading-none">any occasion with our easy-to-use online store. Find your perfect match today.</p>
-                <button class="mt-4 text-md border-b-[1px] cursor-pointer border-transparent hover:border-black">Shop Now</button>
+                <p class=" md:text-lg leading-none">The Easiest Way to Fulfill Your Fantasies. Get the perfect bitch for any occasion with our easy-to-use online store.</p>
+                <p class=" md:text-lg leading-none">Find your perfect match today.</p>
+                <!-- The "Shop Now" button with border styling on hover -->
+                <button class="my-3 text-lg font-bold border-b border-transparent hover:border-black" onclick="window.location.href='store.html';">Shop Now</button>
             </div>
         </div>
+        <!-- The right-side column container for the image -->
         <div class="figures">
+            <!-- The image with an alt attribute -->
             <img src="./assets/Home.jpeg" alt="A couple of bitches">
         </div>
     </div>
-    <div class="smol flex flex-row items-center gap-4 pb-6">
+    <!-- The smaller container with a flex row layout and padding on the bottom -->
+    <div class="smol flex flex-row items-center gap-4 pb-4">
+        <!-- The author container -->
         <div class="author">
             <a class="cursor-pointer" href="https://rb.gy/dqfw10">ALeglessSpider</a>
         </div>
-        <div class="line w-full h-[2px] bg-black"></div>
+        <!-- The line element with a full width and black background color -->
+        <div class="line w-full h-2 bg-black"></div>
     </div>
 </div>
 
+
 <!--Footer-->
 
-<footer class="py-6 pt-4 bg-gray-200 text-gray-900">
+<footer class="py-6 bg-gray-200 text-gray-900">
     <div class="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
         <div class="grid justify-center  lg:justify-between">
             <div class="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">

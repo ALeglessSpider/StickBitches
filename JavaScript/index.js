@@ -42,3 +42,5 @@ close.addEventListener("click", (e) => {
     drawer.classList.remove("fadeInAnimation");
     drawer.classList.add("fadeOutAnimation");
 })
+
+// Sorting

@@ -35,7 +35,9 @@
             <a class="home text-sm cursor-pointer text-black hover:text-lg transition delay-400 hidden md:inline" href="index.html">HOME</a>
             <a class="Store text-sm cursor-pointer text-black hover:text-lg transition delay-400 hidden md:inline" href="store.html">STORE</a>
         </div>
-        <div class="col-span-4 flex flex-row justify-center lg:text-4xl md:text-2xl text-lg">Stick Bitches</div>
+        <div class="col-span-4 flex flex-row justify-center">
+            <a class="lg:text-4xl md:text-2xl text-lg cursor-pointer" href="index.html">Stick Bitches</a>
+        </div>
         <div class="flex flex-row justify-end items-center gap-x-4">
             <i class="text-sm cursor-pointer text-black not-italic hover:text-lg transition delay-400 hidden md:inline">PROFILE</i>
             <button onclick="checkoutHandler(true)" class="text-sm cursor-pointer text-black not-italic hover:text-lg transition delay-400">CART</button>
@@ -77,12 +79,12 @@
         </div>
         <div class="ml-auto flex items-center">
             <div class="Sort-Cont flex flex-row justify-end">
-                <select class="bg-white w-[65px]" id="sor">
+                <select class="bg-white w-[65px]" id="sort-select">
                     <option value disabled selected>Sort</option>
-                    <option value="title-Ascending">A-Z</option>
-                    <option value="title-Descending">Z-A</option>
-                    <option value="price-Ascending">Price High-Low</option>
-                    <option value="price-Descending">Price Low-High</option>
+                    <option value="asc-name">A-Z</option>
+                    <option value="desc-name" >Z-A</option>
+                    <option value="asc-price">Price High-Low</option>
+                    <option value="desc-price">Price Low-High</option>
                 </select>
             </div>
         </div>
@@ -91,14 +93,14 @@
 
 <!--Product Cards-->
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-y-10 gap-x-5 px-4 pb-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-10 gap-x-5 px-4 pb-8">
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
             <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">The One-Upper</h4>
+            <h4 class="title font-bold py-2">The One-Upper</h4>
             <p class="text-[12px]  text-gray-400 font-thin">They may try to outdo you in terms of money, accomplishments, or anything else they can think of. They can be very difficult to deal with and can make conversations unpleasant.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -107,12 +109,12 @@
         </div>
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">Over-Planner</h4>
+            <h4 class="title font-bold py-2">Over-Planner</h4>
             <p class="text-[12px]  text-gray-400 font-thin">They may be seen as controlling or annoying by some people, but they usually have good intentions and just want to make sure everything goes smoothly.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -121,12 +123,12 @@
         </div>
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">Broke Bitch</h4>
+            <h4 class="title font-bold py-2">Broke Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They may seem okay, but they're in a difficult financial situation and are struggling to make ends meet. They can affect you if you are catch feelings for them.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -136,12 +138,12 @@
 
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">Loud Bitch</h4>
+            <h4 class="title font-bold py-2">Loud Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They can be overly loud and obnoxious. She may be opinionated and pushy, and her behavior can be disruptive and annoying. She can affect you by making it difficult to concentrate.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -150,12 +152,12 @@
         </div>
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">Clingy Bitch</h4>
+            <h4 class="title font-bold py-2">Clingy Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They are overly dependent and obsessive. They may constantly call, text, or demand attention and be jealous or possessive if you do not respond in the way they want.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -165,12 +167,12 @@
 
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">Lazy Bitch</h4>
+            <h4 class="title font-bold py-2">Lazy Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They can also create a negative atmosphere, since their lack of motivation and ambition can be contagious and can cause others to become lazy as well.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -179,12 +181,12 @@
         </div>
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">Bitchin’ Bitch</h4>
+            <h4 class="title font-bold py-2">Bitchin’ Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They are very confident, and are not afraid to speak their mind. They can affect you by pushing you to take risks, and inspiring you to stand up for what you believe in.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -193,12 +195,12 @@
         </div>
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">Crazy Bitch</h4>
+            <h4 class="title font-bold py-2">Crazy Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They behave in a very irrational and unpredictable way. They are often volatile and may lash out unexpectedly. They can cause a lot of stress and emotional distress.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -208,12 +210,12 @@
 
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">Basic Bitch</h4>
+            <h4 class="title font-bold py-2">Basic Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They follow the latest trends just for the sake of fitting in and lack originality. They can affect you by setting a tone in which it is more important to fit in than to stand out.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -223,12 +225,12 @@
 
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">The Blogging Bitch</h4>
+            <h4 class="title font-bold py-2">The Blogging Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They blog about various topics and affect you by influencing your opinion on a certain topic or by providing a different perspective that you may not have considered before.</p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -238,12 +240,12 @@
 
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4  class="font-bold py-2">Boyfriend’s Bitch</h4>
+            <h4  class="title font-bold py-2">Boyfriend’s Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They are overly possessive and controlling, and may affect you by making you feel insecure in the relationship, or by causing arguments or fights between you and your friends. </p>
         </div>
         <div class="collect flex justify-between py-4">
@@ -253,12 +255,12 @@
 
     </div>
 
-    <div class="grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
+    <div class="product grid grid-col-1 grid-row-6 border-[1px] rounded-xl p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300">
         <div class="img">
-            <img class="w-full" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
+            <img class="w-full object-cover" src="https://media1.giphy.com/media/OFhB9mzG1hACQ/giphy.gif?cid=ecf05e47gotx5js8vqacs63tbonbmbsaovafw9mhzn6q2not&rid=giphy.gif&ct=g" alt="Bitch Dancing">
         </div>
         <div class="info">
-            <h4 class="font-bold py-2">Everybody’s Bitch</h4>
+            <h4 class="title font-bold py-2">Everybody’s Bitch</h4>
             <p class="text-[12px] text-gray-400 font-thin">They are willing to do anything to please others and can affect you by taking away your own autonomy and power. They may also make decisions that are not in your best interests.</p>
         </div>
         <div class="collect flex justify-between py-4">
